@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SIASA Autopartes</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  	<!--LETRA PARA LOGO-->
+  	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+  	<link rel="stylesheet" type="text/css" href="css/general_style.css">
+  	<link rel="stylesheet" type="text/css" href="css/main_page_style.css">
+
+  	<script type="text/javascript" src="js/general_fun.js"></script>
+  	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row" id="header">
+			<div class="col-2">
+				<div class="container_siasa_logo">
+					<div class="name">SIASA</div>
+					<img src="https://robertelfarfo.github.io/testing/images/GLOBE.png"  id="logo">
+					<div class="phrase">Un mundo de refacciones</div>
+					
+				</div>
+
+			
+			</div>
+
+			<div class="col-10">
+				<div class="container_search_field">
+					<h3>Click en la lupa para buscar pieza </h3>
+
+					<div>
+      					<input type="text" placeholder="Buscar . . ." required>
+    				</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+
+
+		<!--this section is for the navigation elements -->
+		<div class="row" id="nav_bar_mobile">
+
+			<!--this only will be visible on sm and xs size  -->
+			<div class="navigation_container">
+				<div id="menuToggle">
+              		<input type="checkbox" />
+                		<span></span>
+                		<span></span>
+                		<span></span>
+                		<ul id="menu">
+              				<li><a href="#" class="link_mobile_view">Inicio</a></li>
+              				<li><a href="#" class="link_mobile_view">Catalogo</a></li>
+              				<li><a href="#" class="link_mobile_view">Siasa Puntos</a></li>
+              				<li><a href="#" class="link_mobile_view">Contacto</a></li>
+            			</ul>
+            
+        		</div>
+				
+			</div>
+
+		</div>
+
+		<!--this only will be visible on md, lg and xl size  -->
+		<div class="row" id="nav_bar_md">
+			<nav class="navMenu_container">
+				<nav class="navMenu">
+					<a href="#" class="link_comp">Inicio</a>
+					<a href="#" class="link_comp">Catalogo</a>
+					<a href="#" class="link_comp">Siasa Puntos</a>
+					<a href="#" class="link_comp">Contacto</a>
+					<div class="dot"></div>
+				
+				</nav>
+			</nav>
+			
+		</div>
+
+		<!--sectio for the slide show -->
+
+		<div class="row">
+			<div class="slider_container">
+				<ul class="ul_slides">
+					<li class="slide slide1">slide1</li>
+					<li class="slide slide2">slide2</li>
+					<li class="slide slide3">slide3</li>
+					<li class="slide slide1">slide1</li>
+					
+				</ul>
+
+				
+			</div>
+			
+		</div> 
+
+		<div class="row">
+			<!--<div class="resize">Width : </div>-->
+			<div class="slideshow_xs_little_anunce">
+				<div class="image_anunce_container">
+					<div>
+						<img src="https://robertelfarfo.github.io/testing/images/shop2.png" class="image_anunce image1 image_active">
+					</div>
+
+					<div>
+						<img src="https://robertelfarfo.github.io/testing/images/delivery.png" class="image_anunce image2 image_hiden">
+					</div>
+					
+				</div>
+
+				<div class="image_title_container">
+					<div class="image_title title_active">Recoger en tienda</div>
+					<div class="image_title title_hiden">Envio a domicilio</div>
+
+					
+				</div>
+
+				<div class="container_next_image right">
+						<img src="https://robertelfarfo.github.io/testing/images/right-arrow.png" class="image_next_right">
+				</div>
+
+				<div class="container_next_image left">
+					<img src="images/https://robertelfarfo.github.io/testing/images/left-arrow.png" class="image_next_left">
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
