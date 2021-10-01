@@ -1,0 +1,414 @@
+body{
+	font-size: 16px;
+}
+
+.container{
+	max-width: 100%;
+}
+
+
+
+#header{
+	display: flex;
+	background: black;
+}
+
+.container_siasa_logo{
+	height: 85px;
+	/*border: solid 1px red;*/
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* ################# para el logo #################*/
+.container_search_field{
+	height: 85px;
+	/*border: solid 1px green;*/
+	text-align: center;
+}
+
+#logo {
+	display: block;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 6vw;
+}
+
+.container_siasa_logo div{
+	color: white;
+	font-family: Roboto, sans-serif;
+	text-align: center;
+	display: block;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+.name{
+	font-size: 0.7rem;
+}
+.phrase{
+	font-size: 0.5rem;
+}
+
+/* fin de clases para logo*/
+
+
+/* ##############para compo de busqueda animado ####################*/
+
+.container_search_field > h3 {
+	font-family: Roboto, sans-serif;
+  	color: white;
+  	margin-bottom: 2vh;
+  	/*text-shadow: 0 1px #0091c2;*/
+  	text-align: left;
+  	font-size: 2.5vh;
+}
+
+.container_search_field > div {
+  display: inline-block;
+  float: left;
+  position: relative;
+  /*filter: drop-shadow(0 1px #0091c2);*/
+}
+
+/* esta clase es el mango de la lupa*/
+.container_search_field > div:after {
+  content: "";
+  background: white; /* original white*/
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: -3px;
+  transform: rotate(135deg);
+}
+
+/*esta clase es el circulo de la lupa*/
+.container_search_field > div > input {
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px white; /*original white*/
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.container_search_field > div > input::placeholder {
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.container_search_field > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.container_search_field > div > input:focus,
+.container_search_field > div > input:not(:placeholder-shown) {
+  width: 200px;
+}
+
+/* fin de campo de busqueda animado*/
+
+
+/*## para navegacion  ###*/
+
+/* ###### elementos solo vistos en small y extra small ##### */
+.navigation_container{
+	background-color: #F4D03F;
+  	height:50px;
+  	
+}
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top:15px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span{
+
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span{
+
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383F;
+}
+#menuToggle input:checked ~ span:nth-last-child(3){
+
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2){
+
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu{
+
+	padding: 0;
+  	list-style-type: none;
+ 	position: absolute;
+  	width: 180px;
+  	height: 400px;
+  	box-shadow: 0 0 10px #85888C;
+  	margin: -50px 0 0 -50px;
+  	padding: 50px;
+  	padding-top: 125px;
+  	background-color: #F5F6FA;
+  	-webkit-font-smoothing: antialiased;
+  	transform-origin: 0% 0%;
+  	transform: translate(-100%, 0);
+  	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li{
+  padding: 10px 0;
+  transition-delay: 2s;
+}
+
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+
+.link_mobile_view {
+  text-decoration: none;
+  color: #1E1E23;
+  opacity:1;
+  font-family:Roboto, sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  transition: 200ms;
+}
+.link_mobile_view:hover {
+  opacity:0.5;
+  color: #1E1E23;
+}
+
+/* fin de estilo para la vista de small y xtra small */ 
+
+
+
+/* menu  visible en la vista md hasta xl*/
+
+#nav_bar_md{
+  display: none;
+}
+
+.navMenu_container {
+  height: 50px;
+  background: #FAAB35;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+.navMenu{
+  margin-left: :auto;
+  margin-right: auto;
+  width: auto;
+}
+
+.link_comp {
+  text-align: center;
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 150px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.link_comp:hover {
+  color: #7A623E;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #7A623E;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu .link_comp:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(70px);
+  transform: translateX(70px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu .link_comp:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(230px);
+  transform: translateX(230px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu .link_comp:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(380px);
+  transform: translateX(380px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu .link_comp:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(535px);
+  transform: translateX(661.77px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+
+/* fun del menu  visible en la vista md hasta xl*/
+
+
+
+
+/*  fin de la seccion de estilo para navegacion*/
+
+
+
+@media screen and (min-width: 700px){
+
+	html, body {
+		width: auto !important;
+		overflow-x: hidden !important;
+	}
+
+	.container_siasa_logo .name{
+		font-size: 0.9rem;
+	}
+	.phrase{
+		font-size: 0.7rem;
+	}
+
+	.container_siasa_logo,
+	.container_search_field{height: 120px}
+
+  #nav_bar_mobile{
+    display: none;
+  }
+
+  #nav_bar_md{
+    display: block;
+  }
+
+}
+
+
+@media screen and (min-width: 900px){
+
+	html, body {
+		width: auto !important;
+		overflow-x: hidden !important;
+	}
+	#logo{
+		max-width: 6vw;
+	}
+
+	.container_siasa_logo .name{
+		font-size: 1rem;
+	}
+	.phrase{
+		font-size: 0.8rem;
+	}
+
+	.container_siasa_logo,
+	.container_search_field{height: 18vh}
+
+
+}
+
+
+@media screen and (min-width: 960px){
+	html, body {
+		width: auto !important;
+		overflow-x: hidden !important;
+	}
+	#logo{
+		max-width: 5.5vw;
+	}
+	.container_siasa_logo .name{
+		font-size: 1rem;
+	}
+	.phrase{
+		font-size: 0.8rem;
+	}
+
+	.container_siasa_logo,
+	.container_search_field{height: 20vh}
+}
+
+@media screen and (min-width: 1300px){
+	html, body {
+		width: auto !important;
+		overflow-x: hidden !important;
+	}
+	
+	.container_siasa_logo .name{
+		font-size: 1.2rem;
+	}
+	.phrase{
+		font-size: 1rem;
+	}
+
+	.container_siasa_logo,
+	.container_search_field{height: 21vh}
+}

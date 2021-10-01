@@ -1,0 +1,156 @@
+
+/* fot the slide section*/
+.slider_container{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 50vh;
+	text-align: center;
+  	align-content: center;
+  	align-items: center;
+  	overflow: hidden;
+  	padding: 0%;
+  	/*border: solid 1px red;*/
+}
+
+.ul_slides {
+    display: block;
+    width: 1200px;
+    height: 50vh;
+    margin: 0;
+    padding: 0;
+}
+
+.slider_container .ul_slides .slide {
+    float: left;
+    list-style-type: none;
+    width:  400px;
+    height: 50vh;
+}
+
+.slide1 {background: red;}
+.slide2 {background: blue;}
+.slide3 {background: green;}
+
+/* for the slide section*/
+
+/* for the little annonce behind the slide_show*/
+.slideshow_xs_little_anunce{
+	background: #EEEBEB;
+	width: 100%;
+	height: 150px;
+
+}
+
+.image_anunce_container{
+	margin-top: 20px;
+	height: 100px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+  	align-content: center;
+  	align-items: center;
+  	/*border: solid 1px red;*/
+
+}
+
+.image1{
+	width: 90px;
+	height: auto;
+}
+.image2{
+	width: 90px;
+	height: auto;
+}
+
+.image_active{
+	display: block;
+}
+
+.image_hiden{
+	display: none;
+}
+
+.container_next_image{
+	/*border: solid 1px red;*/
+	height: 30px;
+	width: 20px;
+
+}
+
+.right{
+	float: right;
+	margin-right: 10px;
+	margin-top: -70px;
+}
+
+.left{
+	float: left;
+	margin-left:  10px;
+	margin-top: -70px;
+}
+
+.container_next_image img{
+	width: 20px;
+	height: auto;
+}
+
+.image_title_container{
+	/*border: solid 1px red;*/
+	width: 300px;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+  	align-content: center;
+  	align-items: center;
+}
+.title_active{
+	display: inline;
+
+}
+
+.title_hiden{
+	display: none;
+}
+
+.image_title{
+	font-size: 15px;
+}
+
+@media screen and (min-width: 700px){
+
+	.slider_container{
+		width: 80vw;
+		height: 200px;
+	}
+
+	.slider_container .ul_slides .slide {
+		width: 80vw;
+		height: 200px;
+	}
+
+	.ul_slides {
+		width: 7000px;
+	}
+
+	.slideshow_xs_little_anunce{
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 800px){
+
+	.slider_container{
+		height: 300px;
+	}
+
+	.slider_container .ul_slides .slide {
+	    height: 300px;
+	}
+
+
+
+}
